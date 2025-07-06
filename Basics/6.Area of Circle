@@ -1,0 +1,37 @@
+//Area of a Circle | Compute the area of a circle given its radius.
+
+import java.util.Scanner;
+import java.lang.Math;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.print("Enter the radius: ");
+        Scanner sc=new Scanner(System.in);
+        //method1 - using type conversion
+       int radius=sc.nextInt();
+       int area1=(int)3.141*radius*radius;
+       System.out.println("Area of Circle:"+area1);
+
+       //method2
+       System.out.println("Using Math.PI");
+       double r=sc.nextInt();
+       double area=Math.PI*r*r;
+       System.out.println("Area of Circle:"+area);
+       
+       //method3
+       System.out.println("Using Math.pow and Math.PI");
+       double r1=sc.nextInt();
+       double areaOfCircle=Math.PI*Math.pow(r1,2);
+       System.out.println("Area of Circle:"+areaOfCircle);
+    }
+}
+
+Output:
+Enter the radius: 3
+Area of Circle:27
+Using Math.PI
+4
+Area of Circle:50.26548245743669
+Using Math.pow and Math.PI
+5
+Area of Circle:78.53981633974483
