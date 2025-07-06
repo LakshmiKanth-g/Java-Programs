@@ -1,0 +1,32 @@
+//Simple Calculator | Implement a basic calculator (addition, subtraction, multiplication, division, modular division).
+
+import java .util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num1=sc.nextInt(); //taking input values from the user
+        int num2=sc.nextInt();
+        System.out.println("Sum: "+(num1+num2));
+        System.out.println("Sub: "+(num1-num2));
+        System.out.println("Mul: "+(num1*num2));
+        System.out.println("Div: "+(num1/num2));
+        System.out.println("Mod: "+(num1%num2));
+        
+        System.out.println("...2nd method...");
+        //2nd method
+        int n1=12;
+        int n2=24;
+        //assigning the result to a variable
+        int sum=n1+n2; //36
+        int sub=n1-n2;//-12
+        int mul=n1*n2;//288
+        int div=n1/n2;//0 [integer is a whole number]
+        int mod=n1%n2; 
+        System.out.println("Sum: "+sum);
+        System.out.println("Sub: "+sub);
+        System.out.println("Mul: "+mul);
+        System.out.println("Div: "+div);
+        System.out.println("Mod: "+mod);        
+    }
+}
