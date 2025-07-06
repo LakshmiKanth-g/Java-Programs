@@ -1,0 +1,25 @@
+//Swap Two Numbers | Swap two numbers without using a third variable.
+
+import java .util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num1=11;
+        int num2=43;
+        num1=num1+num2;//54
+        num2=num1-num2;//54-43
+        num1=num1-num2;////54-11
+        System.out.println(num1);//43
+        System.out.println(num2);//11
+        
+        //taking input value from the user.
+        int n1=sc.nextInt();
+        int n2=sc.nextInt();
+        n1=n1+n2;
+        n2=n1-n2;
+        n1=n1-n2;
+        System.out.println(n1);
+        System.out.println(n2);        
+    }
+}
