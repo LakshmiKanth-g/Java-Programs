@@ -12,7 +12,8 @@ class Main {
         num1=num1-num2;////54-11
         System.out.println(num1);//43
         System.out.println(num2);//11
-        
+
+        System.out.println("2nd method");
         //taking input value from the user.
         int n1=sc.nextInt();
         int n2=sc.nextInt();
@@ -20,6 +21,16 @@ class Main {
         n2=n1-n2;
         n1=n1-n2;
         System.out.println(n1);
-        System.out.println(n2);        
+        System.out.println(n2); 
+
+        System.out.println("3rd method");
+        //using xor bitmap
+        int a=11;
+        int b=6;
+        a=a^b; //[ 11= 1011, 6=0100, 1011 ^ 0100 = 1111] = 15
+        b=a^b; // 1111^0100= 1011 =11
+        a=a^b; // 1111^1011=0100=6
+        System.out.println(a);
+        System.out.println(b);        
     }
 }
