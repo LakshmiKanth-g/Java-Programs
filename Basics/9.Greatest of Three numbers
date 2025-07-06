@@ -1,0 +1,50 @@
+//Find the Greatest of Three Numbers | Take three numbers as input and determine the largest.
+
+import java.util.Scanner;
+import java.lang.Math;
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the number1 : ");
+        int num1 = sc.nextInt();
+        System.out.print("Enter the number2 : ");
+        int num2 = sc.nextInt();
+        System.out.print("Enter the number3 : ");
+        int num3 = sc.nextInt();
+        
+        if(num1>=num2 && num1>=num3){
+             System.out.println("Greatest number is "+num1);  
+        }else if(num1<=num2 && num2>=num3){
+            System.out.println("Greatest number is: "+num2);
+        }else{
+             System.out.println("Greatest number is: "+num3);   
+        }
+        
+        //method2
+        int a=3,b=1,c=24;
+        System.out.println(a>(b>c? b: c)? a: ((b>c)?b:c));
+        
+        //method3
+        int x=34,y=21,z=14;
+        int greatest=Math.max(Math.max(x,y),z);
+        System.out.println("Greatest is "+greatest);
+        
+        //method4 - using Collections.max()
+        ArrayList<Integer> arr=new ArrayList<>();
+        arr.add(x);
+        arr.add(y);
+        arr.add(z);
+        System.out.println(Collections.max(arr)+" is the greatest num");
+    }
+}
+
+Output:
+Enter the number1 : 12
+Enter the number2 : 31
+Enter the number3 : 14
+Greatest number is: 31
+24
+Greatest is 34
+34 is the greatest num
