@@ -30,7 +30,7 @@ class Main {
         a=a^b; //[ 11= 1011, 6=0100, 1011 ^ 0100 = 1111] = 15
         b=a^b; // 1111^0100= 1011 =11
         a=a^b; // 1111^1011=0100=6
-        System.out.println(a);
-        System.out.println(b);        
+        System.out.println(a); //6
+        System.out.println(b); //11       
     }
 }
