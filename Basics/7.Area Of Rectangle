@@ -1,0 +1,20 @@
+//Area of a Rectangle | Compute the area of a rectangle given length and width.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the length value: ");
+        int length = sc.nextInt();
+        System.out.print("Enter the width value: ");
+        int width= sc.nextInt();
+        int areaOfRectangle = length * width;
+        System.out.println("Area of Rectangle: "+areaOfRectangle);       
+    }
+}
+
+Output:
+Enter the length value: 3
+Enter the width value: 6
+Area of Rectangle: 18
