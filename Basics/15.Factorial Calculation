@@ -1,0 +1,22 @@
+// Factorial Calculation | Find the factorial of a given number.
+
+import java.util.Scanner;
+
+class Main {
+
+    public static void main(String[] args) {
+        System.out.print("Enter the number: ");
+        Scanner sc=new Scanner(System.in);
+        int number=sc.nextInt();
+        int fact=1;
+        while(number!=0){
+            fact=fact*number;
+            number--;
+        }
+        System.out.println("foctorial of a digit is "+fact);
+    }
+}
+
+Output:
+Enter the number: 6
+foctorial of a digit is 720
