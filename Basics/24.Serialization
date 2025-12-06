@@ -1,0 +1,46 @@
+//Write a Serializable example program
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class DemoSerialization implements Serializable{
+	
+	private int id;
+	private String name;
+	private transient String password;
+	public DemoSerialization(int id, String name, String password) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.password=password;
+	}
+
+	@Override
+	public String toString() {
+		return "DemoSerialization [id=" + id + ", name=" + name + "]"+",password= "+password;
+	}
+
+	public static void main(String[] args) throws IOException {
+		
+		DemoSerialization s=new DemoSerialization(23,"Kiran","Mithrama");
+		
+		try {
+			FileOutputStream fout=new FileOutputStream("Serializable.txt");
+			ObjectOutputStream objout=new ObjectOutputStream(fout);
+			objout.writeObject(s);
+			objout.close();
+			fout.close();
+			System.out.println("successfully serialized.....");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}	
+	}
+}
+
+/*
+Output:
+¬í�sr�week1.DemoSerializationàö×‰°iƒ�I�idL�namet�Ljava/lang/String;xp���t�Kiran
+*/
