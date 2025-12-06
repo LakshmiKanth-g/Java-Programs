@@ -1,0 +1,34 @@
+/*
+Cumulative Sum Array
+Problem: Given an array of integers, write a function that returns an array where each element at index i is the sum of elements from the start of the array up to i.
+For example:
+Input: [1, 2, 3, 4]
+Output: [1, 3, 6, 10]
+*/
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SumOfArray {
+
+	public static void main(String[] args) {
+
+		int[] arr= {1,5,4,6,7,3};
+		int n=arr.length;
+		int sum=0;
+		List<Integer> li=new ArrayList<>();
+		for(int i=0;i<n;i++) {
+			sum=sum+arr[i];
+			li.add(sum);
+		}
+		System.out.println("sum of an array: "+sum);
+		System.out.println("sum of List Integer elements Array: "+li);
+	}
+
+}
+
+
+/*
+sum of an array: 26
+sum of List Integer elements Array: [1, 6, 10, 16, 23, 26]
+*/
