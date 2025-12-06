@@ -1,0 +1,27 @@
+//Given an array of integers, count how many of them contain an even number of digits.
+//For example, given arr = [12, 345, 2, 6, 7896], the output would be 2 because 12 and 7896 have an even number of digits.
+
+
+import java.util.Scanner;
+
+public class CountOfEvenOddDigits {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int oddCount=0,evenCount=0;
+		while(n>0) {
+			if(n%2==0) {
+				evenCount++;
+			}else {
+				oddCount++;
+			}
+			n=n/10;
+		}
+		System.out.println("evenCount "+evenCount+" oddCount:"+oddCount);
+	}
+}
+/*
+1872312
+evenCount 3 oddCount:4
+*/
