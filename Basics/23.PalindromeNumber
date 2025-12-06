@@ -1,0 +1,33 @@
+Check the given number is Palindrome or not
+
+public class PolindromeNumbers {
+
+	public static void main(String[] args) {
+		
+		int num=149741;
+		int org=num;
+		int rev=0;
+		while(num!=0) {
+			rev=rev*10+num%10;
+			num/=10;
+		}
+		if(rev==org) {
+			System.out.println(rev+" is a Palindrome");
+		}else {
+			System.out.println(rev+" Not a Palindrome");
+		}
+		
+		int n1=149741;
+		StringBuffer sb=new StringBuffer(String.valueOf(n1));
+		StringBuffer orginial=sb;
+		StringBuffer reverse=sb.reverse();
+		System.out.println("using StringBuffer: "+reverse);
+		System.out.println(sb);
+		if(sb.equals(n1)) {
+			System.out.println("is polindrome");
+		}else {
+			System.out.println("not a polindrome");
+		}
+	}
+
+}
