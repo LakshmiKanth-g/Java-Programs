@@ -1,0 +1,30 @@
+//write a program to DeSerialize the program.
+
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class DemoDeSerialization implements Serializable{
+	
+
+	public static void main(String[] args) {
+		
+		try {
+			FileInputStream fin=new FileInputStream ("/Users/lakshmikanthg/Downloads/Serializable.txt");
+			ObjectInputStream oin=new ObjectInputStream(fin);
+			DemoSerialization d= (DemoSerialization) oin.readObject();
+			oin.close();
+			fin.close();
+			System.out.println(d.toString());
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+}	
+
+/*
+Transient variable is set, so the value can't be stored or serialized/deserialized.
+Output: 
+DemoSerialization [id=23, name=Kiran],password= null
+*/
