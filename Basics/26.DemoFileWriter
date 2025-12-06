@@ -1,0 +1,22 @@
+//Write a program for FileCreation
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class DemoFileCreation {
+
+	public static void main(String[] args) {
+		try {
+			FileWriter fw=new FileWriter("Demo.txt");//Demo.txt file will create in the same project folder.
+			fw.write("Demo Files by Lk");
+			fw.close();
+			System.out.println("successfully updated......");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+/*
+successfully updated......
+*/
