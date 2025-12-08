@@ -1,0 +1,21 @@
+//Write a Java program to implement a lambda expression to check if a given string is empty.
+import java.util.function.Predicate;
+
+public class DemoLambdaProgram {
+	
+	public static void main(String[] args) {
+		//String inputString="";
+		String inputString="kiran";
+		Predicate<String> p=str->str.isEmpty();
+		if(p.test(inputString)) {
+			System.out.println("empty string");
+		}else {
+			System.out.println("not empty string "+inputString);
+		}
+	}
+}
+
+/*
+Output:
+not empty string kiran
+*/
