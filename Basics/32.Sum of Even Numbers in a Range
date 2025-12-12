@@ -1,0 +1,21 @@
+//**Sum of Even Numbers in a Range**
+
+import java.util.Scanner;
+public class DemoExample1 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int sum=0;
+		for(int i=1;i<=num;i++) {//at i=6;6<=6[T] a={1,2,3,4,5,6} starts from 1.
+			if(i%2==0) {
+				sum+=i;
+			}
+		}
+		System.out.println("Sum of evenNumbers in a Range: "+sum);
+	}
+}
+
+/*
+6
+Sum of evenNumbers in a Range: 12
+*/
