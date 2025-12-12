@@ -1,0 +1,26 @@
+//**Find the Missing Number in an Array**
+
+public class MissingNumbers {
+	public static void main(String[] args) {	
+		int[] arr= {1,4,6};
+		int n=6; //max number in an array.
+		boolean[] present=new boolean[n+1];	
+		for(int num:arr) {
+			present[num]=true;
+		}
+		for(int i=0;i<n;i++) {
+			if(i>1) {
+				if(!present[i]) 
+					System.out.println("Missing: "+i);
+			}
+
+		}
+	}
+}
+
+/*
+Output:
+Missing: 2
+Missing: 3
+Missing: 5
+*/
