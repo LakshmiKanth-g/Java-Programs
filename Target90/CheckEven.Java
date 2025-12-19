@@ -1,6 +1,6 @@
 // 1. Java program to Find Odd or Even number
 import java.util.Scanner;
-class Main {
+class CheckEven {
 
     public static void main(String[] args) {
 
